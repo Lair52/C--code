@@ -7,6 +7,7 @@ namespace SegundoProblema
     {
         static void Main(string[] args)
         {
+
             /* Produto p = new Produto();
 
              Console.WriteLine("Entre com os dados do produto:");
