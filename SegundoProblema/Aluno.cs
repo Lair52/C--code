@@ -15,6 +15,7 @@ namespace SegundoProblema
         public double NotaFinal()
         {
             return Nota1 + Nota2 + Nota3;
+
         }
 
         public void Resultado()
