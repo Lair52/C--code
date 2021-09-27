@@ -12,6 +12,7 @@ namespace SegundoProblema
         public static float  Resultado(float Contdolar, float Quantdolar)
         {
             return  Quantdolar * Contdolar * Iof;
+
         }
 
     }
