@@ -12,6 +12,7 @@ namespace SegundoProblema
         public double Area()
         {
             return Largura * Altura;
+
         }
 
         public double Perimetro()

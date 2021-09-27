@@ -13,6 +13,7 @@ namespace SegundoProblema
         public double ValorTotalEmEstoque()
         {
             return Preco * Quantidade;
+
         }
 
         public void AdicionarProdutos(int quantidade)
