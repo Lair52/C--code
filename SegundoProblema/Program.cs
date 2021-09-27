@@ -8,6 +8,8 @@ namespace SegundoProblema
         static void Main(string[] args)
         {
 
+
+            //Simulação loja
             /* Produto p = new Produto();
 
              Console.WriteLine("Entre com os dados do produto:");
@@ -38,7 +40,7 @@ namespace SegundoProblema
              Console.WriteLine("Dados atualizados: " +p);*/
 
 
-
+            //Calculo de area
             /* Retangulo r = new Retangulo();
 
              Console.WriteLine("Entre a largura e altura do retângulo:");
@@ -49,7 +51,9 @@ namespace SegundoProblema
              Console.WriteLine("Perimeto = " + r.Perimetro());
              Console.WriteLine("Diagonal = " + r.Diagonal());*/
 
-            /*Aluno a = new Aluno();
+            //Media de notas
+            /*
+             Aluno a = new Aluno();
 
             Console.Write("Nome: ");
             a.Nome = Console.ReadLine();
@@ -59,15 +63,59 @@ namespace SegundoProblema
             a.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.WriteLine("Nota final = " + a.NotaFinal().ToString("F2", CultureInfo.InvariantCulture));
-            a.Resultado();*/
+            a.Resultado();
+            */
 
 
+            //Converçao de moedas
+            /*
             Console.Write("Qual e a contacao do dólar?");
             float Cont = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Quantos dólares voce vai comprar?");
             float Quant = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.Write("Valor a ser pago em reais = " + ConversordeMoeda.Resultado(Cont, Quant).ToString("F2", CultureInfo.InvariantCulture));
+            */
+
+            //Simulação de sistema bancário
+            Conta u = new Conta();
+            string sim = "s";
+
+            Console.Write("Entre com o numero da conta: ");
+            u.Numconta = int.Parse(Console.ReadLine());
+            Console.Write("Entre com o titular da conta: ");
+            u.Nome = Console.ReadLine();
+            Console.Write("Havera deposito incial?(s/n): ");
+            string resp = Console.ReadLine();
+
+            if (String.Equals(resp, sim))
+            {
+                Console.Write("Entre com o deposito: ");
+                u.Saldo = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                u.Saldo = 0;
+            }
+
+            Console.WriteLine("Dados da conta: ");
+            Console.WriteLine(u.ToString());
+
+            Console.Write("Entre com o valor do deposito: ");
+            double q = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            u.Deposito(q);
+
+            Console.WriteLine("Dados da conta atualizados: ");
+            Console.WriteLine(u);
+
+            Console.Write("Entre com o valor do saque (O custo fixo pelo saque e de $5): ");
+            q = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            u.Saque(q);
+
+            Console.WriteLine("Dados da conta atualizados: ");
+            Console.WriteLine(u);
+
 
         }
     }
